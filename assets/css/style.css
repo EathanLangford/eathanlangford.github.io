@@ -1,0 +1,36 @@
+/* html {
+  
+} */
+
+body {
+   margin:0; 
+   background-repeat: repeat;
+   background-image:url("/assets/imgs/gameboy_screen.png");
+  }
+
+.gameboy_frame {
+    background-image:url("/assets/imgs/gameboy_frame.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 124vw;
+    /* width: 55.3vh; */
+    height: 100vh;
+    background-position: top -7vh right -9vw;
+    /* background-position-x: -15vw; */
+    overflow: hidden;
+  }
+
+  .content {
+    width: 80vw;
+    height: 47vh;
+    margin-left: 6vh;
+    margin-top: 3vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    /* position: absolute; */
+    /* background-color: blue; */
+  }
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
