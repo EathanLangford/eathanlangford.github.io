@@ -63,6 +63,13 @@ p {
   /* box-shadow: 0 0 15px #D73D93; */
 }
 
+.contact {
+  width: 30%vw;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
   .content {
     background-image:url("/assets/imgs/gameboy_glow.png");
     background-repeat: no-repeat;
