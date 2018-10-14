@@ -30,7 +30,8 @@ body {
   outline: 2px solid red;
   background-color: #FFF2F9;
   z-index: 3;
-  animation: fade_from_black 2s ease-in;
+  animation: bootup 4s ease-in;
+  animation: glow 4s ease-in;
 }
 .content {
   background-repeat: no-repeat;
@@ -94,15 +95,17 @@ body {
   position: absolute;
   /* padding: 2vh 2vw; */
   /* background-color: blue; */
-  animation: bootup;
+  /* animation: screen_effect 5s ease, */
+  animation: glow 3s infinite;
   z-index: 0;
+  opacity: 1;
 }
 .logo {
   margin-top: 110px;
   margin-left: 0px;
   width: 260px;
   height: 170px;
-  background-size: 254px;
+  background-size: 265px;
   background-repeat: no-repeat;
   background-image: url("/assets/imgs/eathan_logo_pixels.png")
 }
@@ -294,20 +297,24 @@ dive {
   }
 }
 
-@keyframes fade_from_black {
+@keyframes screen_effect {
   0% {
 opacity: 0.1;
 }
   100% {
     opacity: 1;
   }
-  0% {
-opacity: 0.1;
 }
-  100% {
+
+@keyframes glow {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
     opacity: 1;
   }
 }
+
 @keyframes bootup {
   0% {
     opacity: 0;
