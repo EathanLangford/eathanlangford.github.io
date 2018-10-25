@@ -5,6 +5,58 @@ body {
   /* background-repeat: repeat; */
   /* background-image:url("/assets/imgs/gameboy_screen.png"); */
  }
+
+ .arrow {
+  background:url("/assets/imgs/arrow.png");
+  background-size: 100%;
+  background-position: absolute;
+  height: 5.1vh;
+  width: 8vw;
+  margin-left: 28vw;
+  margin-top: 39vh;
+  position: absolute;
+  background-repeat: no-repeat;
+  z-index: 9;
+  animation: bounce 2s infinite;
+}
+
+ .light {
+  position: fixed;
+  height: 1vh;
+  width: 1.6vw;
+  margin-left: 15.8vw;
+  margin-top: 37.5vh;
+  box-shadow: #FFF2F9;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  outline: 2px solid red;
+  background-color: #FFF2F9;
+  z-index: 3;
+  /* animation: bootup 4s ease-in; */
+}
+
+ .glow {
+  background-image: url("/assets/imgs/gameboy_glow.png");
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: cover;
+  /* background-position: top 8vh right 8vw; */
+  width: 66.5vw;
+  height: 56vh;
+  margin-left: 20.3%;
+  margin-top: 8vh;
+  /* overflow: scroll; */
+  /* overflow-x: hidden; */
+  /* text-align: left; */
+  position: absolute;
+  /* padding: 2vh 2vw; */
+  /* background-color: blue; */
+  /* animation: screen_effect 5s ease, */
+  animation: glow 3s infinite;
+  z-index: 0;
+  opacity: 1;
+}
+
  .screenback {
    background-repeat: repeat;
    background-image: url("/assets/imgs/gameboy_screen.png");
@@ -27,6 +79,9 @@ body {
    /* background-color: blue; */
    /* animation: bootup 2s ease-in; */
  }
+
+
+
  .content {
   /* background-image:url("/assets/imgs/gameboy_glow.png"); */
   /* background-repeat: no-repeat;
@@ -46,7 +101,7 @@ body {
  .container {
   position: relative;
   height: 100vh;
-  /* width: 30vw; */
+  width: 100vw;
   margin: 0 auto;
   position: relative;
   background-repeat: no-repeat;
@@ -58,7 +113,7 @@ body {
 
 
 .logo {
- margin-top: 15vh;
+ margin-top: 13vh;
  /* margin-left: 15vw; */
  width: 80vw;
  height: 47vh;
@@ -81,6 +136,8 @@ body {
   font-size: 2.6em;
   font-family: 'Press Start 2P', sans-serif;
   text-align: center;
+  padding-top: 30%;
+  padding-bottom: 15%;
 }
 
 h2 {
@@ -119,7 +176,7 @@ p {
 }
 
  .skills{
-   /* margin-left: 0vw; */
+   margin-left: 2vw;
    width: 63vw;
    /* height: 5em; */
    display: flex;
@@ -187,8 +244,9 @@ input, textarea {
     color: #D73D93;
     text-size: 25px;
     text-align: center;
-    width: 100px;
+    width: 30%;
     border: double;
+    margin-top: 10%;
   }
   
   ::-webkit-scrollbar {
@@ -196,39 +254,6 @@ input, textarea {
     /* remove scrollbar space */
     background: transparent;
     /* optional: just make scrollbar invisible */
-  }
-  
-  @mixin backlight($x, $y, $spread, $size, $colorA, $colorB, $duration) {
-    &:after {
-      position: absolute;
-      content: "";
-      top: $y;
-      left: $x;
-      right: 0;
-      z-index: -1;
-      height: 100%;
-      width: 100%;
-      margin: 0 auto;
-      transform: scale($size);
-      -webkit-filter: blur($spread);
-      -moz-filter: blur($spread);
-      -ms-filter: blur($spread);
-      filter: blur($spread);
-      background: linear-gradient(270deg, $colorA, $colorB);
-      background-size: 200% 200%;
-      animation: animateGlow $duration ease infinite;
-      @keyframes animateGlow {
-        0% {
-          background-position: 0% 50%
-        }
-        50% {
-          background-position: 100% 50%
-        }
-        100% {
-          background-position: 0% 50%
-        }
-      }
-    }
   }
   
   
@@ -259,6 +284,20 @@ input, textarea {
     }
   }
 
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+  
+
+/*----------------------------------------------------------------*/
 @media only screen and (min-width: 600px) {
   body {
     margin: 0;
@@ -366,6 +405,7 @@ input, textarea {
     margin-left: -6px;
     width: 260px;
     height: 170px;
+    padding-bottom: 5%;
     background-size: 265px;
     background-repeat: no-repeat;
     background-image: url("/assets/imgs/eathan_logo_pixels.png")
@@ -487,7 +527,9 @@ input, textarea {
     -moz-box-shadow: 0px 0px 10px #D73D93;
     box-shadow: 0px 0px 10px #D73D93;
   }
-  
+}
+
+@media only screen and (min-width: 600px) {
 
   
   
