@@ -1,3 +1,49 @@
-body {
-  background: red;
+/* CSS BELOW ⬇️⬇️⬇️⬇️⬇️ */
+.crt_frame {
+    background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/71d67e23-33a4-4296-b1e2-146c1a2eb2d7/dexnk7i-e2f5ebee-0f44-4424-abce-bb6063edf9b9.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzcxZDY3ZTIzLTMzYTQtNDI5Ni1iMWUyLTE0NmMxYTJlYjJkN1wvZGV4bms3aS1lMmY1ZWJlZS0wZjQ0LTQ0MjQtYWJjZS1iYjYwNjNlZGY5YjkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.XoxEjMroIo4Z77j4pKXcjk3fvoabrOYozJHHkZ1JxhI") no-repeat, fixed, center;
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: 100% 100%;
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
 }
+div#de2dae12-63a6-11ed-9b0b-bf21df3a7d91 {
+    display: none;
+}
+.app-container {
+padding: 13%;
+}
+@keyframes flicker {
+                50% {
+                    top: -4px
+                }
+            }
+
+.flickr {
+	    animation: flicker .08s step-end infinite;
+}
+
+.crt::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: " ";
+    display: block;
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAMAAACDKl70AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAASUExURRsYIHRkaGuCdH6Dn1RHTgAAAOs9MSMAAAAGdFJOU///////ALO/pL8AAAAJcEhZcwAADsIAAA7CARUoSoAAAAAXSURBVBhXY2BgZGJmYGFlZWVgZWVlBQABFAAu1qxlKwAAAABJRU5ErkJggg==");
+
+    opacity: 0.5;
+    background-repeat: repeat;
+    z-index: 99;
+
+    background-size: 2px,2px;
+
+    image-rendering: optimizeSpeed;
+    pointer-events: none;
+    animation: flicker .08s step-end infinite
+}
+
+/* CSS ABOVE ⬆️⬆️⬆️⬆️⬆️ */
